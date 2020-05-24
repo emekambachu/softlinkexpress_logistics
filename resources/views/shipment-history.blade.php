@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    Get Tracking Code
+    Shipment History
 @endsection
 
 @section('header')
@@ -26,7 +26,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="" class="btn btn__primary btn__hover3"><i class="icon-list"></i>
+                            <a href="{{ url('track-shipment') }}" class="btn btn__primary btn__hover3"><i class="icon-list"></i>
                                 <span>Track Shipment</span></a>
                         </li>
                     </ul>
@@ -75,69 +75,65 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <h5 class="pagetitle__heading">Get Tracking ID</h5>
+                    <h5 class="pagetitle__heading">Shipment History</h5>
                 </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.page-title -->
 
-    <section id="trackShipmeent" class="track-shipmeent">
+    <section id="trackShipmeent" class="track-shipmeent" style="padding: 20px 0;">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <aside class="sidebar sidebar-layout2 mb-30">
-                        <div class="widget widget-categories widget-categories-2">
-                            <div class="widget-content">
-                                <ul class="list-unstyled">
-                                    <li><a>Warehousing</a></li>
-                                    <li><a>Air Freight</a></li>
-                                    <li><a>Ocean Freight</a></li>
-                                    <li><a>Road Freight</a></li>
-                                    <li><a>Supply Chain</a></li>
-                                    <li><a>Packaging</a></li>
-                                </ul>
-                            </div><!-- /.widget-content -->
-                        </div><!-- /.widget-categories -->
+                <div class="col-sm-12 col-md-12 col-lg-12">
 
-                        <div class="widget widget-help bg-theme">
-                            <div class="widget__content">
-                                <h5>How Can <br> We Help You!</h5>
-                                <p>We understand the importance approaching each work integrally and believe in the power of simple
-                                    and easy communication.</p>
-                                <a href="{{ url('contact') }}" class="btn btn__secondary btn__hover2"><i class="fa fa-envelope"></i>Contact Us</a>
-                            </div><!-- /.widget-download -->
-                        </div><!-- /.widget-help -->
+                    <table class="table table-dark">
+                        <tbody>
+                        <tr>
+                            <td><strong>Recipient Name:</strong> {{ $shipment->user->name }} </td>
+                            <td><strong>Recipient Email:</strong> {{ $shipment->user->email }}</td>
+                            <td><strong>Recipient Mobile:</strong> {{ $shipment->user->mobile }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parcel Name:</strong> {{ $shipment->parcel->name }} </td>
+                            <td><strong>Parcel Weight:</strong> {{ $shipment->parcel->weight }}</td>
+                            <td><strong>Parcel Description:</strong> {{ $shipment->parcel->description }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tracking ID:</strong> {{ $shipment->tracking_id }}</td>
+                            <td><strong>Shipment Origin:</strong> {{ $shipment->origin }}</td>
+                            <td><strong>Shipment Destination:</strong> {{ $shipment->destination }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shipment Date:</strong> {{date('jS \of F Y', strtotime($shipment->created_at))}}</td>
+                            <td><strong>Last Shipment Date:</strong> {{date('jS \of F Y', strtotime($lastCheckpoint->created_at))}}</td>
+                            <td><strong>Last Location:</strong> {{ $lastCheckpoint->location }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                    </aside><!-- /.sidebar -->
-                </div><!-- /.col-lg-4 -->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                <div class="col-sm-12 col-md-12 col-lg-8">
+                        @foreach($checkpoints as $checkpoint)
+                            <tr>
+                                <th scope="row">{{ $loop->iteration }}</th>
+                                <td>{{ $checkpoint->status }}</td>
+                                <td>{{ $checkpoint->location }}</td>
+                                <td>{{date('jS \of F Y', strtotime($checkpoint->created_at))}}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
 
-                    @include('includes.alerts')
 
-                    <form method="post" action="{{ url('track-shipment') }}" class="request-quote-form">
-                        @csrf
-                        <div class="row mb-30">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <p class="fz-16 mb-45">Track Shipment with your Tracking ID.</p>
-                            </div><!-- /.col-lg-12 -->
-
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group">
-                                    <label>Tracking ID</label>
-                                    <div class="form-group">
-                                        <input type="text" name="tracking_id" class="form-control" placeholder="Your Parcel Tracking ID">
-                                    </div>
-                                </div>
-                            </div><!-- /.col-lg-12 -->
-
-                        </div><!-- /.row -->
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <button type="submit" class="btn btn__secondary btn__block">Track your Parcel</button>
-                            </div><!-- /.col-lg-12 -->
-                        </div><!-- /.row -->
-                    </form>
                 </div><!-- /.col-lg-8 -->
 
             </div><!-- /.row -->

@@ -44,6 +44,12 @@
                                         <td class="c-table__cell"> {{ $ship->destination }} </td>
                                         <td class="c-table__cell">{{date('jS \of F Y', strtotime($ship->created_at))}}</td>
                                         <td>
+                                            <a class="mb-2" href="{{ action('ShipmentHistoryController@shipmentCheckpoints', $ship->id) }}">
+                                                <button class="btn btn-sm btn-warning">
+                                                    Checkpoints
+                                                </button>
+                                            </a>
+
                                             <a class="mb-2" href="{{ action('ShipmentController@insertCheckpoint', $ship->id) }}">
                                                 <button class="btn btn-sm btn-warning">
                                                     Insert checkpoint

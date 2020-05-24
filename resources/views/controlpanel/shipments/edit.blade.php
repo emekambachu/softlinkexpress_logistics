@@ -23,24 +23,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Stop 1</label>
-                    <input name="stop1" class="form-control" type="text"
-                           value="{{ $shipment->stop1 }}">
-                </div>
-
-                <div class="form-group">
-                    <label>Stop 2</label>
-                    <input name="stop2" class="form-control" type="text"
-                           value="{{ $shipment->stop2 }}">
-                </div>
-
-                <div class="form-group">
-                    <label>Stop 3</label>
-                    <input name="stop3" class="form-control" type="text"
-                           value="{{ $shipment->stop3 }}">
-                </div>
-
-                <div class="form-group">
                     <label>Final Destination</label>
                     <input name="destination" class="form-control" type="text"
                            value="{{ $shipment->destination }}" required>

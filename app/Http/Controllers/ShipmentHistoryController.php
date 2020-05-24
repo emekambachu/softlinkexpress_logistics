@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Shipment;
 use App\ShipmentHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -63,11 +64,17 @@ class ShipmentHistoryController extends Controller
             $message->subject('Shipment checkpoint at'.$data['location']);
         });
 
-        Session::flash('cuccess', 'Checkpoint has been added');
+        Session::flash('success', 'Checkpoint has been added');
         return redirect()->back();
     }
 
+    public function shipmentCheckpoints($id)
+    {
+        $shipment = Shipment::find($id);
+        $checkpoints = ShipmentHistory::where('shipment_id', $id)->orderBy('created_at', 'desc')->paginate();
 
+        return view('controlpanel.shipments.shipment-checkpoints', compact('checkpoints', 'shipment'));
+    }
 
     /**
      * Display the specified resource.
@@ -86,9 +93,10 @@ class ShipmentHistoryController extends Controller
      * @param  \App\ShipmentHistory  $shipmentHistory
      * @return \Illuminate\Http\Response
      */
-    public function edit(ShipmentHistory $shipmentHistory)
+    public function edit($id)
     {
-        //
+        $checkpoint = ShipmentHistory::findOrFail($id);
+        return view('controlpanel.shipments.edit-checkpoint', compact('checkpoint' ));
     }
 
     /**
@@ -98,9 +106,16 @@ class ShipmentHistoryController extends Controller
      * @param  \App\ShipmentHistory  $shipmentHistory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ShipmentHistory $shipmentHistory)
+    public function update(Request $request, $id)
     {
-        //
+        //get ID
+        $checkpoint = ShipmentHistory::findOrFail($id);
+
+        $checkpoint->update($request->all());
+
+        //session notification
+        Session::flash('success', 'Updated');
+        return redirect()->back();
     }
 
     /**
@@ -109,8 +124,14 @@ class ShipmentHistoryController extends Controller
      * @param  \App\ShipmentHistory  $shipmentHistory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ShipmentHistory $shipmentHistory)
+    public function destroy($id)
     {
-        //
+        //find Category and delete
+        ShipmentHistory::findOrFail($id)->delete();
+
+        //flash notification
+        Session::flash('warning', 'Deleted');
+
+        return redirect()->back();
     }
 }

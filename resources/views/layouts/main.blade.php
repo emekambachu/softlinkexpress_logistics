@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-4 footer__widget footer__widget-about">
                         <div class="footer__widget-content">
-                            <img src="{{ asset('softlinkexpress_logo.png') }}" alt="logo" class="mb-30">
+                            <img width="200" src="{{ asset('softlinkexpress_logo.png') }}" alt="logo" class="mb-30">
                         </div>
                     </div><!-- /.col-lg-4 -->
 
@@ -72,13 +72,13 @@
                     </div><!-- /.col-lg-2 -->
 
                     <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-                        <h6 class="footer__widget-title">Quick Links</h6>
+                        <h6 class="footer__widget-title">Contacts</h6>
                         <div class="footer__widget-content">
                             <nav>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">Request A Quote</a></li>
-                                    <li><a href="#">Track & Trace</a></li>
-                                    <li><a href="#">Help & FAQ</a></li>
+                                    <li><a href="">+1 305-307-1470</a></li>
+                                    <li><a href="">+44 7520647634</a></li>
+                                    <li><a href="">info@softlinkexpress.com</a></li>
                                 </ul>
                             </nav>
                         </div><!-- /.footer-widget-content -->

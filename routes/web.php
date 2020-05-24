@@ -54,9 +54,10 @@ Route::resource('control-panel/shipment-history', 'ShipmentHistoryController');
 Route::get('/insert-checkpoint/{id}', ['uses' => 'ShipmentController@insertCheckpoint']);
 Route::post('/activate-shipment/{id}', ['uses' => 'ShipmentController@activateShipment']);
 Route::post('track-shipment', ['uses' => 'ShipmentController@trackShipment']);
-Route::get('/shipment-routes/{tracking_id}',
-    ['as'=>'shipment-routes', 'uses'=>'ShipmentController@shipmentRoutes']
+Route::get('/shipment-history/{tracking_id}',
+    ['as'=>'shipment-history', 'uses'=>'ShipmentController@shipmentHistory']
 );
 
 // Shipment History
 Route::post('/submit-checkpoint/{id}', ['uses' => 'ShipmentHistoryController@submitCheckpoint']);
+Route::get('/shipment-checkpoints/{id}', ['uses' => 'ShipmentHistoryController@shipmentCheckpoints']);

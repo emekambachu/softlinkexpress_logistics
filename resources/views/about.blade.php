@@ -18,7 +18,8 @@
 
                 <div class="header__top-right d-none d-lg-block">
                     <ul class="list-unstyled d-flex justify-content-end align-items-center">
-                        <li><i class="icon-phone"></i><span>+55 654 541 17</span></li>
+                        <li><i class="icon-phone"></i><span>+1 305-307-1470</span></li>
+                        <li><i class="icon-phone"></i><span>+44 7520647634</span></li>
                         <li>
                             <div class="dropdown bg-white">
                                 <div id="google_translate_element"></div>

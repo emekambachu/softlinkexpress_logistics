@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Parcel;
 use App\Shipment;
+use App\ShipmentHistory;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -207,26 +208,31 @@ class ShipmentController extends Controller
 
         // Check tracking Status
         if(!$checkTrackingStatus){
-            Session::flash('warning', 'Your Shipment has not been activated');
+            Session::flash('warning', 'Your Shipment is not active');
             return redirect()->back();
         }
 
         // Check tracking Id Validity
         if(!$validateTrackingId){
-            Session::flash('warning', 'Your Shipment ID does not exist');
+            Session::flash('warning', 'This tracking ID does not exist');
             return redirect()->back();
         }
 
-        return redirect('shipment-routes/'.$checkTrackingStatus->tracking_id);
+        return redirect('shipment-history/'.$checkTrackingStatus->tracking_id);
     }
 
-    public function shipmentRoutes($tracking_id){
+    public function shipmentHistory($tracking_id){
+
         $shipment = Shipment::where([
             ['tracking_id', '=', $tracking_id],
             ['is_active', '=', true]
         ])->get()->first();
 
-        return view('shipment-routes', compact('shipment'));
+        $lastCheckpoint = ShipmentHistory::where('shipment_id', $shipment->id)->orderBy('created_at', 'desc')->get()->first();
+
+        $checkpoints = ShipmentHistory::where('shipment_id', $shipment->id)->orderBy('created_at', 'desc')->paginate();
+
+        return view('shipment-history', compact('shipment', 'checkpoints', 'lastCheckpoint'));
     }
 
     /**

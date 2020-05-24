@@ -18,7 +18,8 @@
 
                 <div class="header__top-right d-none d-lg-block">
                     <ul class="list-unstyled d-flex justify-content-end align-items-center">
-                        <li><i class="icon-phone"></i><span>+55 654 541 17</span></li>
+                        <li><i class="icon-phone"></i><span>+1 305-307-1470</span></li>
+                        <li><i class="icon-phone"></i><span>+44 7520647634</span></li>
                         <li>
                             <div class="dropdown bg-white">
                                 <div id="google_translate_element"></div>
@@ -148,45 +149,30 @@
             <div class="row">
 
                 <!-- Contact panel #1 -->
-                <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="contact-panel">
                         <div class="contact__panel-header">
-                            <h4 class="contact__panel-title">London Office</h4>
+                            <h4 class="contact__panel-title">USA Office</h4>
                         </div>
                         <ul class="contact__list list-unstyled">
-                            <li>002 010123456789</li>
+                            <li>+1 305-307-1470</li>
                             <li>Email: info@cargobaselogistics.com</li>
-                            <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
+                            <li>Address: 34u Brooklyn, NY</li>
                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                         </ul>
                     </div><!-- /.contact-panel -->
                 </div><!-- /.col-lg-4 -->
 
                 <!-- Contact panel #2 -->
-                <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="contact-panel">
                         <div class="contact__panel-header">
-                            <h4 class="contact__panel-title">Berlin Office</h4>
+                            <h4 class="contact__panel-title">UK Office</h4>
                         </div>
                         <ul class="contact__list list-unstyled">
-                            <li>002 010123456789</li>
+                            <li>+44 7520647634</li>
                             <li>Email: info@cargobaselogistics.com</li>
-                            <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
-                            <li>Hours: Mon-Fri: 8am – 7pm</li>
-                        </ul>
-                    </div><!-- /.contact-panel -->
-                </div><!-- /.col-lg-4 -->
-
-                <!-- Contact panel #3 -->
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="contact-panel">
-                        <div class="contact__panel-header">
-                            <h4 class="contact__panel-title">Manchester Office</h4>
-                        </div>
-                        <ul class="contact__list list-unstyled">
-                            <li>002 010123456789</li>
-                            <li>Email: info@cargobaselogistics.com</li>
-                            <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
+                            <li>Address: 2307 Beverley Rd Manchester</li>
                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                         </ul>
                     </div><!-- /.contact-panel -->
