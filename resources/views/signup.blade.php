@@ -73,12 +73,12 @@
     <!-- ========================
        page title
     =========================== -->
-    <section id="page-title" class="page-title bg-overlay bg-parallax">
+    <section id="page-title" class="page-title bg-overlay bg-parallax" style="padding: 150px 0;">
         <div class="bg-img"><img src="{{ asset('assets/images/page-titles/2.jpg') }}" alt="background"></div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <h1 class="pagetitle__heading">Sign up</h1>
+                    <h5 class="pagetitle__heading">Sign up</h5>
                 </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -92,12 +92,12 @@
                         <div class="widget widget-categories widget-categories-2">
                             <div class="widget-content">
                                 <ul class="list-unstyled">
-                                    <li><a href="">Warehousing</a></li>
-                                    <li><a href="">Air Freight</a></li>
-                                    <li><a href="">Ocean Freight</a></li>
-                                    <li><a href="">Road Freight</a></li>
-                                    <li><a href="">Supply Chain</a></li>
-                                    <li><a href="">Packaging</a></li>
+                                    <li><a>Warehousing</a></li>
+                                    <li><a>Air Freight</a></li>
+                                    <li><a>Ocean Freight</a></li>
+                                    <li><a>Road Freight</a></li>
+                                    <li><a>Supply Chain</a></li>
+                                    <li><a>Packaging</a></li>
                                 </ul>
                             </div><!-- /.widget-content -->
                         </div><!-- /.widget-categories -->

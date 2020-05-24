@@ -26,14 +26,9 @@ class CreateShipmentsTable extends Migration
             $table->string('tracking_id');
 
             $table->string('origin');
-            $table->string('stop1')->nullable();
-            $table->string('stop2')->nullable();
-            $table->string('stop3')->nullable();
-
-            $table->tinyInteger('status')->default('0');
             $table->string('destination');
 
-            $table->tinyInteger('is_active')->default('0');
+            $table->tinyInteger('is_active')->default('1');
 
             $table->timestamps();
 

@@ -28,4 +28,8 @@ class Shipment extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function shipmentHistories(){
+        return $this->hasMany(ShipmentHistory::class);
+    }
 }

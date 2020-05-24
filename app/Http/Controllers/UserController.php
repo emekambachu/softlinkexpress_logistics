@@ -64,7 +64,7 @@ class UserController extends Controller
         ];
 
         //send email to user
-        Mail::send('emails.new-tracking', $data, static function($message) use ($data){
+        Mail::send('emails.new-signup', $data, static function($message) use ($data){
             $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->to($data['email'], $data['name']);
             $message->replyTo('info@softlinkexpress.com', 'Softlink Express Delivery');
@@ -72,7 +72,7 @@ class UserController extends Controller
         });
 
         //send email to Admin
-        Mail::send('emails.new-tracking-admin', $data, static function($message) use ($data){
+        Mail::send('emails.new-signup-admin', $data, static function($message) use ($data){
             $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->to('info@softlinkexpress.com');
             $message->replyTo('info@softlinkexpress.com', 'Softlink Express Delivery');
@@ -80,7 +80,7 @@ class UserController extends Controller
         });
 
         //flash notification
-        Session::flash('success', 'Your Tracking ID Request has been sent, you will be notified once approved');
+        Session::flash('success', 'Your account has been successfully created, our staff will send you procedures tracking your parcel');
         return redirect()->back();
     }
 

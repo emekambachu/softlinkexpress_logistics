@@ -29,7 +29,10 @@ class ShipmentController extends Controller
      */
     public function create()
     {
-        //
+        $parcels = Parcel::all();
+        $users = User::all();
+
+        return view('controlpanel.shipments.create', compact('parcels', 'users'));
     }
 
     /**
@@ -42,87 +45,57 @@ class ShipmentController extends Controller
     {
         $input = $request->all();
 
-        //Check if user details is already stored
-        $checkUser = User::where([
-            ['email', '=', $input['email']],
-        ])->first();
-
-        // if user exists, assign $user to existing user, else create user and assign $user to created user
-        if($checkUser){
-            $user = $checkUser;
-        }else{
-            $user = User::create([
-                'name' => $input['name'],
-                'email' => $input['email']
-            ]);
-        }
-
-        // Get parcel from parcel number
-        $getParcel = Parcel::where('parcel_number', $input['parcel_number'])->get()->first();
-
-        // Check if parcel exists
-        if(!$getParcel){
-            //flash notification
-            Session::flash('warning', $input['parcel_number'].' Does not exist');
-            return redirect()->back();
-        }
+        //Get User
+//        $user = User::where([
+//            ['email', '=', $input['email']],
+//        ])->first();
 
         // Check if user already submitted
-        $checkParcel = Shipment::where([
-            ['user_id', '=', $user->id],
-            ['parcel_id', '=', $getParcel->id],
-            ['is_active', '=', false]
-        ])->first();
+//        $checkShipment = Shipment::where([
+//            ['tracking_id', '=', $user->id],
+//            ['parcel_id', '=', $getParcel->id],
+//            ['is_active', '=', false]
+//        ])->first();
 
-        if($checkParcel){
-            //flash notification
-            Session::flash('warning', $input['parcel_number'].' has already been submitted, wait till it has been shipped');
-            return redirect()->back();
-        }
+//        if($checkShipment){
+//            //flash notification
+//            Session::flash('warning', $input['parcel_number'].' has already been submitted, wait till it has been shipped');
+//            return redirect()->back();
+//        }
 
         //Generate Tracking Number
         function TrackingId($length = 6){
             $characters = '0123456789';
             $charactersLength = strlen($characters);
-            $randomString = 'CBLOG-TRACK';
+            $randomString = 'SLINK-TRACK';
             for ($i = 0; $i < $length; $i++) {
                 $randomString .= $characters[random_int(0, $charactersLength - 1)];
             }
             return $randomString;
         }
 
-        $shipment = Shipment::create([
-            'parcel_id' => $getParcel->id,
-            'user_id' => $user->id,
-            'tracking_id' => TrackingId()
-        ]);
+        $input['tracking_id'] = TrackingId();
+
+        $shipment = Shipment::create($input);
 
         //Add all values to data array
         $data = [
-            'parcel' => $getParcel->name,
-            'email' => $user->email,
-            'name' => $user->name,
-            'tracking_id' => TrackingId(),
+            'parcel' => $shipment->parcel->name,
+            'email' => $shipment->user->email,
+            'name' => $shipment->user->name,
+            'tracking_id' => $input['tracking_id'],
         ];
 
         //send email to user
-        Mail::send('emails.new-tracking', $data, static function($message) use ($data){
+        Mail::send('emails.new-shipment', $data, static function($message) use ($data){
             $message->from('info@cargobaselogistics.com', 'Cargo Base Logistics');
             $message->to($data['email'], $data['name'])->cc('info@cargobaselogistics.com');
             $message->replyTo('info@cargobaselogistics.com', 'Cargo Base Logistics');
-            $message->subject('Request for Tracking Submitted Submitted');
-        });
-
-        //send email to Admin
-        Mail::send('emails.new-tracking-admin', $data, static function($message) use ($data){
-            $message->from('info@cargobaselogistics.com', 'Cargo Base Logistics');
-            $message->to($data['email'], $data['name'])->cc('info@cargobaselogistics.com');
-            $message->replyTo('info@cargobaselogistics.com', 'Cargo Base Logistics');
-            $message->subject($data['name'].' Just Initiated his shipment, go to control panel');
+            $message->subject('Your shipment has been initiated');
         });
 
         //flash notification
-        Session::flash('success', 'Your Tracking ID Request has been sent, you will be notified once approved');
+        Session::flash('success', 'Shipment for '.$data['name'].' has been initiated');
         return redirect()->back();
 
     }
@@ -170,6 +143,12 @@ class ShipmentController extends Controller
         return redirect()->back();
     }
 
+    public function insertCheckpoint($id)
+    {
+        $shipment = Shipment::findOrFail($id);
+        return view('controlpanel.shipments.insert-checkpoint', compact('shipment' ));
+    }
+
     public function activateShipment(Request $request, $id)
     {
         //get ID
@@ -199,7 +178,6 @@ class ShipmentController extends Controller
             'name' => $shipment->user->name,
             'email' => $shipment->user->email,
             'tracking_id' => $shipment->tracking_id,
-            'status' => $shipment->is_active,
             'email_subject' => $email_subject,
         ];
 

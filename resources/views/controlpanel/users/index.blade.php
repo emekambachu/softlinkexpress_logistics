@@ -23,7 +23,11 @@
                                 <th>S/N</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Delete</th>
+                                <th>Mobile</th>
+                                <th>Country</th>
+                                <th>State</th>
+                                <th>Address</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
 
@@ -35,6 +39,10 @@
                                         <td class="c-table__cell"> {{ $loop->iteration }} </td>
                                         <td class="c-table__cell"> {{ $user->name }} </td>
                                         <td class="c-table__cell"> {{ $user->email }} </td>
+                                        <td class="c-table__cell"> {{ $user->mobile }} </td>
+                                        <td class="c-table__cell"> {{ $user->country }} </td>
+                                        <td class="c-table__cell"> {{ $user->state }} </td>
+                                        <td class="c-table__cell"> {{ $user->address }} </td>
                                         <td>
                                             <form method="POST" action="{{ route('users.destroy', $user->id) }}" style="margin-bottom: 5px;">
                                                 @csrf

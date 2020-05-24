@@ -45,12 +45,18 @@ Route::get('control-panel', static function (){
     return view('controlpanel.index');
 });
 
+Route::resource('control-panel/users', 'UserController');
 Route::resource('control-panel/parcels', 'ParcelController');
 Route::resource('control-panel/shipments', 'ShipmentController');
-Route::resource('control-panel/users', 'UserController');
+Route::resource('control-panel/shipment-history', 'ShipmentHistoryController');
 
+// Shipment
+Route::get('/insert-checkpoint/{id}', ['uses' => 'ShipmentController@insertCheckpoint']);
 Route::post('/activate-shipment/{id}', ['uses' => 'ShipmentController@activateShipment']);
 Route::post('track-shipment', ['uses' => 'ShipmentController@trackShipment']);
 Route::get('/shipment-routes/{tracking_id}',
     ['as'=>'shipment-routes', 'uses'=>'ShipmentController@shipmentRoutes']
 );
+
+// Shipment History
+Route::post('/submit-checkpoint/{id}', ['uses' => 'ShipmentHistoryController@submitCheckpoint']);

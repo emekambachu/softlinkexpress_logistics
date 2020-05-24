@@ -32,8 +32,14 @@
                 <a class="nav-link" href="{{ route('users.index') }}">Users</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('shipments.index') }}">Shipments</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Shipments
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{ route('shipments.index') }}">View all</a>
+                    <a class="dropdown-item" href="{{ route('shipments.create') }}">Add New</a>
+                </div>
             </li>
 
             <li class="nav-item dropdown">

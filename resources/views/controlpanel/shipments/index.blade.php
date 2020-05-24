@@ -25,15 +25,9 @@
                                 <th>User</th>
                                 <th>Tracking Id</th>
                                 <th>Origin</th>
-                                <th>Stop 1</th>
-                                <th>Stop 2</th>
-                                <th>Stop 3</th>
                                 <th>Destination</th>
-                                <th>Status</th>
                                 <th>Date</th>
-                                <th>Edit</th>
-                                <th>Activate</th>
-                                <th>Delete</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
 
@@ -47,30 +41,28 @@
                                         <td class="c-table__cell"> {{ $ship->user ? $ship->user->name: 'Not Assigned' }} </td>
                                         <td class="c-table__cell"> {{ $ship->tracking_id }} </td>
                                         <td class="c-table__cell"> {{ $ship->origin }} </td>
-                                        <td class="c-table__cell"> {{ $ship->stop1 }} </td>
-                                        <td class="c-table__cell"> {{ $ship->stop2 }} </td>
-                                        <td class="c-table__cell"> {{ $ship->stop3 }} </td>
                                         <td class="c-table__cell"> {{ $ship->destination }} </td>
-                                        <td class="c-table__cell"> {{ $ship->is_active ? 'Active':'Inactive' }} </td>
                                         <td class="c-table__cell">{{date('jS \of F Y', strtotime($ship->created_at))}}</td>
                                         <td>
+                                            <a class="mb-2" href="{{ action('ShipmentController@insertCheckpoint', $ship->id) }}">
+                                                <button class="btn btn-sm btn-warning">
+                                                    Insert checkpoint
+                                                </button>
+                                            </a>
+
                                             <a href="{{route('shipments.edit', $ship->id)}}">
-                                                <button class="btn btn-circle btn-warning">
+                                                <button class="btn btn-sm btn-warning">
                                                     Edit
                                                 </button>
                                             </a>
-                                        </td>
 
-                                        <td>
-                                            <form method="POST" action="{{ action('ShipmentController@activateShipment', $ship->id) }}" style="margin-bottom: 5px;">
+                                            <form class="mt-2" method="POST" action="{{ action('ShipmentController@activateShipment', $ship->id) }}" style="margin-bottom: 5px;">
                                                 @csrf
                                                 <button type="submit" class="btn btn-info btn-sm">
                                                     {{ $ship->is_active ? 'Deactivate' : 'Activate' }}
                                                 </button>
                                             </form>
-                                        </td>
 
-                                        <td>
                                             <form method="POST" action="{{ route('shipments.destroy', $ship->id) }}" style="margin-bottom: 5px;">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
@@ -79,7 +71,6 @@
                                                 </button>
                                             </form>
                                         </td>
-
                                     </tr>
 
                                 @endforeach
