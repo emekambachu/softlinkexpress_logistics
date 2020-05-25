@@ -46,24 +46,6 @@ class ShipmentController extends Controller
     {
         $input = $request->all();
 
-        //Get User
-//        $user = User::where([
-//            ['email', '=', $input['email']],
-//        ])->first();
-
-        // Check if user already submitted
-//        $checkShipment = Shipment::where([
-//            ['tracking_id', '=', $user->id],
-//            ['parcel_id', '=', $getParcel->id],
-//            ['is_active', '=', false]
-//        ])->first();
-
-//        if($checkShipment){
-//            //flash notification
-//            Session::flash('warning', $input['parcel_number'].' has already been submitted, wait till it has been shipped');
-//            return redirect()->back();
-//        }
-
         //Generate Tracking Number
         function TrackingId($length = 6){
             $characters = '0123456789';
@@ -90,7 +72,7 @@ class ShipmentController extends Controller
         //send email to user
         Mail::send('emails.new-shipment', $data, static function($message) use ($data){
             $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
-            $message->to($data['email'], $data['name'])->cc('info@softlinkexpress.com');
+            $message->to($data['email'], $data['name']);
             $message->replyTo('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->subject('Your shipment has been initiated');
         });

@@ -95,7 +95,7 @@
                         </tr>
                         <tr>
                             <td><strong>Parcel Name:</strong> {{ $shipment->parcel->name }} </td>
-                            <td><strong>Parcel Weight:</strong> {{ $shipment->parcel->weight }}</td>
+                            <td><strong>Parcel Weight:</strong> {{ $shipment->parcel->weight }}KG</td>
                             <td><strong>Parcel Description:</strong> {{ $shipment->parcel->description }}</td>
                         </tr>
                         <tr>
