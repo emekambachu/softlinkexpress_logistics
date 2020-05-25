@@ -30,7 +30,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="" class="btn btn__primary btn__hover3"><i class="icon-list"></i>
+                            <a href="{{ url('track-shipment') }}" class="btn btn__primary btn__hover3"><i class="icon-list"></i>
                                 <span>Track Shipment</span></a>
                         </li>
                     </ul>
