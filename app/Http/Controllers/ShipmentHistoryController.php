@@ -61,7 +61,7 @@ class ShipmentHistoryController extends Controller
             $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->to($data['email'], $data['name']);
             $message->replyTo('Info@cargobaselogistics.com', 'Softlink Express Delivery');
-            $message->subject('Shipment checkpoint at'.$data['location']);
+            $message->subject('Shipment checkpoint at '.$data['location']);
         });
 
         Session::flash('success', 'Checkpoint has been added');
