@@ -14,4 +14,4 @@
     </p>
 @endif
 
-<p>contact <i>info@cargobaselogistics.com</i> for more info.</p>
+<p>contact <i>info@softlinkexpress.com</i> for more info.</p>

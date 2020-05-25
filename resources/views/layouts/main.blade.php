@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Cargo Base Logistics ">
+    <meta name="description" content="Softlink Express Delivery ">
     <link href="{{ asset('softlinkexpress_logoonly.png') }}" rel="icon">
 
-    <title> @yield('title') - Cargo Base Logistics </title>
+    <title> @yield('title') - Softlink Express Delivery </title>
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:400,700%7cWork+Sans:400,600,700&amp;display=swap">
@@ -99,7 +99,7 @@
                                     <li><a href="#">Sitemap</a></li>
                                 </ul>
                             </nav>
-                            <span>&copy; {{ date('Y') }} Cargo Base Logistics</span>
+                            <span>&copy; {{ date('Y') }} Softlink Express Delivery</span>
                         </div><!-- /.Footer-copyright -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center">

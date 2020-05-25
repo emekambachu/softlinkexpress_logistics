@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Cargo Base Logistics ">
+    <meta name="description" content="Softlink Express Delivery ">
     <link href="{{ asset('softlinkexpress_logoonly.png') }}" rel="icon">
-    <title>Cargo Base Logistics </title>
+    <title>Softlink Express Delivery </title>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:400,700%7cWork+Sans:400,600,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('assets/css/libraries.css') }}" />
@@ -338,12 +338,12 @@
                             </div><!-- /.carousel -->
                         </div><!-- /.col-lg-5 -->
                         <div class="col-sm-12 col-md-7 col-lg-7">
-                            <p class="heading__desc mb-30">Cargo Base Logistics is a representative logistics operator providing full range
+                            <p class="heading__desc mb-30">Softlink Express Delivery is a representative logistics operator providing full range
                                 of service in the sphere
                                 of customs clearance and transport worldwide for any type of cargo.</p>
                             <p>We pride ourselves on providing the best transport and shipping services available allover the
                                 world. Our skilled personnel, utilising the latest communications, tracking and processing software,
-                                combined with decades of experience! Through integrated supply chain solutions, Cargo Base Logistics drives
+                                combined with decades of experience! Through integrated supply chain solutions, Softlink Express Delivery drives
                                 sustainable competitive advantages to some of Australia's largest companies.</p>
                             <img src="{{ asset('assets/images/about/singnture.png') }}" alt="singnture" class="signature mb-30">
                         </div><!-- /.col-lg-7 -->
@@ -1279,7 +1279,7 @@
                         <!-- Testimonial #1 -->
                         <div class=" testimonial-item">
                             <div class="testimonial__content">
-                                <p class="testimonial__desc">Cargo Base Logistics team is the best of the best, and expertly trained team members
+                                <p class="testimonial__desc">Softlink Express Delivery team is the best of the best, and expertly trained team members
                                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                                     environment.</p>
@@ -1288,7 +1288,7 @@
                         <!-- Testimonial #2 -->
                         <div class=" testimonial-item">
                             <div class="testimonial__content">
-                                <p class="testimonial__desc">Cargo Base Logistics team is the best of the best, and expertly trained team members
+                                <p class="testimonial__desc">Softlink Express Delivery team is the best of the best, and expertly trained team members
                                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                                     environment.</p>
@@ -1297,7 +1297,7 @@
                         <!-- Testimonial #3 -->
                         <div class=" testimonial-item">
                             <div class="testimonial__content">
-                                <p class="testimonial__desc">Cargo Base Logistics team is the best of the best, and expertly trained team members
+                                <p class="testimonial__desc">Softlink Express Delivery team is the best of the best, and expertly trained team members
                                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                                     environment.</p>
@@ -1448,7 +1448,7 @@
                                     <div class="accordion__item-body">
                                         <ul class="contact__list list-unstyled">
                                             <li>002 010123456789</li>
-                                            <li>Email: Cargo Base Logistics@7oroof.com</li>
+                                            <li>Email: Softlink Express Delivery@7oroof.com</li>
                                             <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
                                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                                         </ul>
@@ -1463,7 +1463,7 @@
                                     <div class="accordion__item-body">
                                         <ul class="contact__list list-unstyled">
                                             <li>002 010123456789</li>
-                                            <li>Email: Cargo Base Logistics@7oroof.com</li>
+                                            <li>Email: Softlink Express Delivery@7oroof.com</li>
                                             <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
                                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                                         </ul>
@@ -1478,7 +1478,7 @@
                                     <div class="accordion__item-body">
                                         <ul class="contact__list list-unstyled">
                                             <li>002 010123456789</li>
-                                            <li>Email: Cargo Base Logistics@7oroof.com</li>
+                                            <li>Email: Softlink Express Delivery@7oroof.com</li>
                                             <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
                                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                                         </ul>
@@ -1489,7 +1489,7 @@
                     </div><!-- /.contact-panel -->
                 </div><!-- /.col-lg-4 -->
                 <div class="col-sm-12 col-md-12 col-lg-3 text-right">
-                    <h2 class="cta__title">Sign up for industry news and insights from Cargo Base Logistics.</h2>
+                    <h2 class="cta__title">Sign up for industry news and insights from Softlink Express Delivery.</h2>
                 </div><!-- /.col-lg-3 -->
                 <div class="col-sm-12 col-md-12 col-lg-5">
                     <form>
@@ -1598,7 +1598,7 @@
                                     <li><a href="#">Privacy Policy</a></li>
                                 </ul>
                             </nav>
-                            <span>&copy; 2019 Cargo Base Logistics</span>
+                            <span>&copy; 2019 Softlink Express Delivery</span>
                         </div><!-- /.Footer-copyright -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center">

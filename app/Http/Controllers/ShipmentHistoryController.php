@@ -58,9 +58,9 @@ class ShipmentHistoryController extends Controller
         ];
 
         Mail::send('emails.new-checkpoint', $data, static function ($message) use ($data) {
-            $message->from('info@cargobaselogistics.com', 'Cargo Base Logistics');
+            $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->to($data['email'], $data['name']);
-            $message->replyTo('Info@cargobaselogistics.com', 'Cargo Base Logistics');
+            $message->replyTo('Info@cargobaselogistics.com', 'Softlink Express Delivery');
             $message->subject('Shipment checkpoint at'.$data['location']);
         });
 

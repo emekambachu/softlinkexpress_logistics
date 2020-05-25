@@ -105,8 +105,20 @@
                         </tr>
                         <tr>
                             <td><strong>Shipment Date:</strong> {{date('jS \of F Y', strtotime($shipment->created_at))}}</td>
-                            <td><strong>Last Shipment Date:</strong> {{date('jS \of F Y', strtotime($lastCheckpoint->created_at))}}</td>
-                            <td><strong>Last Location:</strong> {{ $lastCheckpoint->location }}</td>
+                            <td><strong>Last Shipment Date:</strong>
+                                @if(!empty($lastCheckpoint->created_at))
+                                {{date('jS \of F Y', strtotime($lastCheckpoint->created_at))}}
+                                @else
+                                    <i>Awaiting Shipment</i>
+                                @endif
+                            </td>
+                            <td><strong>Last Location:</strong>
+                                @if(!empty($lastCheckpoint->location))
+                                    {{$lastCheckpoint->location}}
+                                @else
+                                   <i>Awaiting Shipment</i>
+                                @endif
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -122,14 +134,18 @@
                         </thead>
                         <tbody>
 
-                        @foreach($checkpoints as $checkpoint)
-                            <tr>
-                                <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $checkpoint->status }}</td>
-                                <td>{{ $checkpoint->location }}</td>
-                                <td>{{date('jS \of F Y', strtotime($checkpoint->created_at))}}</td>
-                            </tr>
-                        @endforeach
+                        @if($checkpoints)
+                            @foreach($checkpoints as $checkpoint)
+                                <tr>
+                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <td>{{ $checkpoint->status }}</td>
+                                    <td>{{ $checkpoint->location }}</td>
+                                    <td>{{date('jS \of F Y', strtotime($checkpoint->created_at))}}</td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <p>Awaiting Shipment</p>
+                        @endif
                         </tbody>
                     </table>
 

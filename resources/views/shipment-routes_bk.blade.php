@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>{{ $shipment->tracking_id }} - Cargo Base Logistics</title>
+    <title>{{ $shipment->tracking_id }} - Softlink Express Delivery</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -110,7 +110,7 @@
 </div>
 
 <div class="footer">
-    <p>Copyright {{ date('Y') }} © Cargo Base Logistics.</p>
+    <p>Copyright {{ date('Y') }} © Softlink Express Delivery.</p>
 </div>
 </body>
 </html>

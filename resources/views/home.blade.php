@@ -755,7 +755,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div><!-- /.testimonial-rating -->
-                                <p class="testimonial__desc">“Cargo Base Logistics expertly trained team members who take the extra step and go the
+                                <p class="testimonial__desc">“Softlink Express Delivery expertly trained team members who take the extra step and go the
                                     extra mile, all to fulfill our dedicated promise deliver innovative and solutions to our
                                     customers!”</p>
                             </div><!-- /.testimonial-content -->
@@ -778,7 +778,7 @@
                                     <i class="fa fa-star"></i>
                                 </div><!-- /.testimonial-rating -->
                                 <p class="testimonial__desc">“In my career, I’ve seen great companies serving logistics. But not to
-                                    the point where you feel that comfort and trust that we get with Cargo Base Logistics Company In.”</p>
+                                    the point where you feel that comfort and trust that we get with Softlink Express Delivery Company In.”</p>
                             </div><!-- /.testimonial-content -->
                             <div class="testimonial__meta">
                                 <h5 class="testimonial__meta-title">Martin Hope</h5>

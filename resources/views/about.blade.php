@@ -101,10 +101,10 @@
                                 Time!</h2>
                         </div><!-- /.col-lg-12 -->
                         <div class="col-sm-12 col-md-7 col-lg-7">
-                            <p class="heading__desc mb-30">Cargo Base Logistics is a representative logistics operator providing full range of service in the sphere of customs clearance and transport worldwide for any type of cargo.</p>
+                            <p class="heading__desc mb-30">Softlink Express Delivery is a representative logistics operator providing full range of service in the sphere of customs clearance and transport worldwide for any type of cargo.</p>
                             <p>We pride ourselves on providing the best transport and shipping services available allover the
                                 world. Our skilled personnel, utilising the latest communications, tracking and processing software,
-                                combined with decades of experience! Through integrated supply chain solutions, Cargo Base Logistics drives
+                                combined with decades of experience! Through integrated supply chain solutions, Softlink Express Delivery drives
                                 sustainable competitive advantages to some of Australia's largest companies.</p>
                             <img src="{{ asset('assets/images/about/singnture.png') }}" alt="singnture" class="signature mb-30">
                         </div><!-- /.col-lg-7 -->
@@ -183,7 +183,7 @@
                     <div class="inner-padding">
                         <div class="heading heading-2 mb-50">
                             <h2 class="heading__title color-white">Logistic & Transport Solutions Saves Your Time!</h2>
-                            <p class="heading__desc color-white">Cargo Base Logistics is a representative logistics operator providing full
+                            <p class="heading__desc color-white">Softlink Express Delivery is a representative logistics operator providing full
                                 range of service in the sphere of customs clearance and transportation worldwide for any type of
                                 cargo. </p>
                         </div><!-- /.heading -->

@@ -751,7 +751,7 @@
                         <!-- Testimonial #1 -->
                         <div class=" testimonial-item">
                             <div class="testimonial__content">
-                                <p class="testimonial__desc">Cargo Base Logistics team is the best of the best, and expertly trained team members
+                                <p class="testimonial__desc">Softlink Express Delivery team is the best of the best, and expertly trained team members
                                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                                     environment.</p>
@@ -760,7 +760,7 @@
                         <!-- Testimonial #2 -->
                         <div class=" testimonial-item">
                             <div class="testimonial__content">
-                                <p class="testimonial__desc">Cargo Base Logistics team is the best of the best, and expertly trained team members
+                                <p class="testimonial__desc">Softlink Express Delivery team is the best of the best, and expertly trained team members
                                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                                     environment.</p>
@@ -769,7 +769,7 @@
                         <!-- Testimonial #3 -->
                         <div class=" testimonial-item">
                             <div class="testimonial__content">
-                                <p class="testimonial__desc">Cargo Base Logistics team is the best of the best, and expertly trained team members
+                                <p class="testimonial__desc">Softlink Express Delivery team is the best of the best, and expertly trained team members
                                     who take the extra step and go the extra mile, all to fulfill our dedicated promise to deliver
                                     innovative and dynamic solutions to our customers to fit the needs of a rapidly changing global
                                     environment.</p>

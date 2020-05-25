@@ -89,9 +89,9 @@ class ShipmentController extends Controller
 
         //send email to user
         Mail::send('emails.new-shipment', $data, static function($message) use ($data){
-            $message->from('info@cargobaselogistics.com', 'Cargo Base Logistics');
-            $message->to($data['email'], $data['name'])->cc('info@cargobaselogistics.com');
-            $message->replyTo('info@cargobaselogistics.com', 'Cargo Base Logistics');
+            $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
+            $message->to($data['email'], $data['name'])->cc('info@softlinkexpress.com');
+            $message->replyTo('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->subject('Your shipment has been initiated');
         });
 
@@ -183,9 +183,9 @@ class ShipmentController extends Controller
         ];
 
         Mail::send('emails.verify-shipment', $data, static function ($message) use ($data) {
-            $message->from('info@cargobaselogistics.com', 'Cargo Base Logistics');
+            $message->from('info@softlinkexpress.com', 'Softlink Express Delivery');
             $message->to($data['email'], $data['name']);
-            $message->replyTo('Info@cargobaselogistics.com', 'Cargo Base Logistics');
+            $message->replyTo('Info@cargobaselogistics.com', 'Softlink Express Delivery');
             $message->subject($data['email_subject']);
         });
 

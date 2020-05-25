@@ -156,7 +156,7 @@
                         </div>
                         <ul class="contact__list list-unstyled">
                             <li>+1 305-307-1470</li>
-                            <li>Email: info@cargobaselogistics.com</li>
+                            <li>Email: info@softlinkexpress.com</li>
                             <li>Address: 34u Brooklyn, NY</li>
                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                         </ul>
@@ -171,7 +171,7 @@
                         </div>
                         <ul class="contact__list list-unstyled">
                             <li>+44 7520647634</li>
-                            <li>Email: info@cargobaselogistics.com</li>
+                            <li>Email: info@softlinkexpress.com</li>
                             <li>Address: 2307 Beverley Rd Manchester</li>
                             <li>Hours: Mon-Fri: 8am – 7pm</li>
                         </ul>
@@ -181,6 +181,4 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /. Contact panels -->
-
-
 @endsection
