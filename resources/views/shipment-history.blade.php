@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
 
-                    <table class="table table-dark">
+                    <table class="table table-dark table-responsive-md">
                         <tbody>
                         <tr>
                             <td><strong>Recipient Name:</strong> {{ $shipment->user->name }} </td>
@@ -123,7 +123,7 @@
                         </tbody>
                     </table>
 
-                    <table class="table table-striped">
+                    <table class="table table-striped table-responsive-md">
                         <thead>
                         <tr>
                             <th scope="col">#</th>

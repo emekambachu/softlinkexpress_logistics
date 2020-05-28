@@ -75,7 +75,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <h5 class="pagetitle__heading">Get Tracking ID</h5>
+                    <h5 class="pagetitle__heading">Track Your Shipment</h5>
                 </div><!-- /.col-lg-12 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -86,18 +86,6 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <aside class="sidebar sidebar-layout2 mb-30">
-                        <div class="widget widget-categories widget-categories-2">
-                            <div class="widget-content">
-                                <ul class="list-unstyled">
-                                    <li><a>Warehousing</a></li>
-                                    <li><a>Air Freight</a></li>
-                                    <li><a>Ocean Freight</a></li>
-                                    <li><a>Road Freight</a></li>
-                                    <li><a>Supply Chain</a></li>
-                                    <li><a>Packaging</a></li>
-                                </ul>
-                            </div><!-- /.widget-content -->
-                        </div><!-- /.widget-categories -->
 
                         <div class="widget widget-help bg-theme">
                             <div class="widget__content">
@@ -119,7 +107,7 @@
                         @csrf
                         <div class="row mb-30">
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <p class="fz-16 mb-45">Track Shipment with your Tracking ID.</p>
+                                <p class="fz-16 mb-45">Track Shipment using your Tracking ID.</p>
                             </div><!-- /.col-lg-12 -->
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
