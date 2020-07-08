@@ -9,6 +9,22 @@ use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
+    public function submitContact(Request $request){
+
+        $input = $request->all();
+
+        //send email to user
+        Mail::send('emails.contact-form', $input, static function($message) use ($input){
+            $message->from('info@cargobaselogistics.com', 'Cargobase Logistics');
+            $message->to($input['email'], $input['name']);
+            $message->replyTo('info@cargobaselogistics.com', 'Cargobase Logistics');
+            $message->subject('Contact Message From '.$input['name']);
+        });
+
+        Session::flash('success', 'Submitted');
+        return redirect()->back();
+    }
+
     /**
      * Display a listing of the resource.
      *

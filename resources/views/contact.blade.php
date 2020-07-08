@@ -96,27 +96,34 @@
             </div><!-- /.row -->
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                    <form>
+
+                    @include('includes.alerts')
+                    <form method="post" action="{{ url('submit-contact-form') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                                <div class="form-group"><input type="text" class="form-control" placeholder="Name"></div>
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control" placeholder="Name"></div>
                             </div><!-- /.col-lg-6 -->
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                                <div class="form-group"><input type="email" class="form-control" placeholder="Email"></div>
+                                <div class="form-group">
+                                    <input name="email" type="email" class="form-control" placeholder="Email"></div>
                             </div><!-- /.col-lg-6 -->
                         </div><!-- /.row -->
                         <div class="row">
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                                <div class="form-group"><input type="text" class="form-control" placeholder="Phone"></div>
+                                <div class="form-group">
+                                    <input name="mobile" type="text" class="form-control" placeholder="Phone"></div>
                             </div><!-- /.col-lg-6 -->
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                                <div class="form-group"><input type="text" class="form-control" placeholder="Company"></div>
+                                <div class="form-group">
+                                    <input name="company" type="text" class="form-control" placeholder="Company"></div>
                             </div><!-- /.col-lg-6 -->
                         </div><!-- /.row -->
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Request Details"></textarea>
+                                    <textarea name="details" class="form-control" placeholder="Request Details"></textarea>
                                 </div>
                             </div><!-- /.col-lg-12 -->
                         </div><!-- /.row -->
@@ -126,6 +133,7 @@
                             </div><!-- /.col-lg-12 -->
                         </div><!-- /.row -->
                     </form>
+
                 </div><!-- /.col-lg-8 -->
             </div><!-- /.row -->
         </div><!-- /.container -->

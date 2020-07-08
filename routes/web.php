@@ -29,6 +29,8 @@ Route::get('contact', static function () {
     return view('contact');
 });
 
+Route::post('submit-contact-form', 'UserController@submitContact');
+
 Route::get('signup', static function () {
     return view('signup');
 });
