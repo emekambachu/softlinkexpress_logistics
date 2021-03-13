@@ -76,7 +76,8 @@
                         <div class="footer__widget-content">
                             <nav>
                                 <ul class="list-unstyled">
-                                    <li><a href="">+1 305-307-1470</a></li>
+{{--                                    <li><a href="">+1 305-307-1470</a></li>--}}
+                                    <li><a href="">(917) 410-3503</a></li>
                                     <li><a href="">+44 7520647634</a></li>
                                     <li><a href="">info@softlinkexpress.com</a></li>
                                 </ul>
