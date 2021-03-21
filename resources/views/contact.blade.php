@@ -164,7 +164,7 @@
                             <h4 class="contact__panel-title">USA Office</h4>
                         </div>
                         <ul class="contact__list list-unstyled">
-                            <li>+1 305-307-1470</li>
+                            <li>(917)410-3503</li>
                             <li>Email: info@softlinkexpress.com</li>
                             <li>Address: 34u Brooklyn, NY</li>
                             <li>Hours: Mon-Fri: 8am – 7pm</li>
